@@ -1,0 +1,113 @@
+/* Forms.css */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto; /* Centraliza no meio da tela */
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Faz o formulário se adaptar melhor */
+}
+
+/* Form input styling */
+.form-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px; /* Reduzi para melhor aparência */
+}
+
+.form-input-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column; /* Padrão para telas pequenas */
+  gap: 20px;
+}
+
+.form-input-container {
+  width: 100%;
+  max-width: 600px; /* Evita que fique muito grande */
+  margin: auto;
+}
+
+.form-list {
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.form-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.form-input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-input-field:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* 🔥 Melhorando a responsividade */
+@media (min-width: 768px) {
+  .form-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form-input-container, .form-list {
+    flex: 1;
+    max-width: 50%; /* Cada um ocupa metade da tela */
+  }
+}
+
+@media (min-width: 1024px) {
+  .form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+  }
+
+  .form-content {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .form-input-container, .form-list {
+    max-width: 45%; /* Ajuste fino */
+  }
+}

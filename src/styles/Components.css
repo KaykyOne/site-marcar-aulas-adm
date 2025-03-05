@@ -1,0 +1,261 @@
+/* ===========================
+   INPUT & BUTTON STYLES
+=========================== */
+.input-padrao {
+    box-sizing: border-box;
+    /* Inclui padding no tamanho total */
+    border-radius: 12px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 300px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.button-padrao, 
+.button-invertido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 40px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 20px;
+}
+
+/* Apenas as mudanças do botão invertido */
+.button-invertido {
+    background-color: transparent;
+    border: solid 2px white;
+    color: white;
+}
+
+.button-padrao {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+.buttonBack {
+    display: flex;
+    gap: 5px;
+    margin: 10px;
+    margin-top: 20px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* ===========================
+     CHECKBOX STYLES
+  =========================== */
+.checkbox {
+    display: none;
+    /* Oculta o checkbox real */
+}
+
+.checkbox+label {
+    position: relative;
+    padding-left: 30px;
+    /* Espaço para a "caixa" do checkbox */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.checkbox+label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.checkbox:checked+label::before {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.checkbox:checked+label::after {
+    content: '✔';
+    position: absolute;
+    left: 5px;
+    top: -2px;
+    font-size: 18px;
+    color: white;
+}
+
+/* ===========================
+     LOGO & LOADING STYLES
+  =========================== */
+.logo {
+    max-width: 300px;
+    max-height: 300px;
+    margin-top: 20px;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8);
+    /* Fundo branco com transparência */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    /* Fica na frente de todos os elementos */
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #858585;
+    border-top: 5px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===========================
+     SELECT STYLES
+  =========================== */
+.select {
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+
+/* ===========================
+     ADDITIONAL STYLES
+  =========================== */
+.link {
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.link:hover {
+    opacity: 0.8;
+}
+
+.iconeSimples {
+    max-width: 90px;
+}
+
+/*=====================================
+    DATE PICKER STYLES
+========================================*/
+
+/* Estiliza o campo de input */
+.react-datepicker-wrapper {
+    width: 100%;
+}
+
+.react-datepicker__input-container input {
+    width: 90%;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid var(--primary-color);
+    /* Azul */
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Estiliza o calendário */
+.react-datepicker {
+    font-family: Arial, sans-serif;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Cabeçalho do calendário */
+.react-datepicker__header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px;
+    border-bottom: none;
+}
+
+/* Dias do calendário */
+.react-datepicker__day {
+    padding: 8px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* Dia selecionado */
+.react-datepicker__day--selected {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Dia ao passar o mouse */
+.react-datepicker__day:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Estiliza a seleção de horário */
+.react-datepicker__time-container {
+    background-color: #f8f9fa;
+    border-left: 2px solid var(--primary-color);
+}
+
+/*=====================================
+    MODAL STYLES
+========================================*/
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(12, 12, 12, 0.4);
+    /* Fundo branco com transparência */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    /* Fica na frente de todos os elementos */
+}
+
+.modal-back{
+    overflow: auto;
+    background-color: white;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos no tamanho total */
+    padding: 10px; /* Exemplo de padding, pode ajustar conforme necessário */
+    border-radius: 20px;
+    width: 50vw;
+    padding-bottom: 10px;
+}
